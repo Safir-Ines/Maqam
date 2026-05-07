@@ -1,0 +1,124 @@
+MAQAM KIDS APP - FEATURES OVERVIEW
+
+This document summarizes the main features currently available in the app.
+
+1) LANDING EXPERIENCE
+- Welcome landing screen with branded visual identity.
+- Clear call-to-action to enter the app.
+- Family-friendly look and feel focused on children.
+
+2) PROFILE PICKER (LOGIN STYLE)
+- Multi-profile child selection before entering the app.
+- Three profile types by age band:
+  - 3-6 years
+  - 7-10 years
+  - 11+ years
+- Profile avatars and basic labels shown in the picker.
+
+3) AGE-BASED LEARNING PATHS
+- The home screen content is dynamically adapted by selected age group.
+
+For ages 3-6:
+- Coloring activities.
+- Story Reader with simpler story complexity.
+- Basic math learning.
+- Arabic alphabet/letters learning.
+- Daily wisdom messages.
+
+For ages 7-10:
+- Map game challenges.
+- National stories.
+- "What happened today in history" section.
+- More advanced math activities.
+- English learning path (replacing alphabet path).
+- Daily wisdom messages.
+
+For ages 11+:
+- More complex map challenges.
+- Deeper/advanced story reading.
+- More analytical history content.
+- Advanced math direction.
+- English skills focus.
+- Daily wisdom messages.
+
+4) HOME DASHBOARD
+- Personalized welcome using selected profile name.
+- Quick-access cards for all available sections.
+- Dynamic section visibility/content based on age profile.
+- Daily challenge card to drive engagement.
+- Stats widgets (points, collected heroes, streak display).
+
+5) INTERACTIVE MAP GAME
+- Algeria map-based progression system.
+- Region selection with lock/unlock behavior.
+- Region levels displayed as a path (4 levels per region).
+- Level completion tracking and local persistence.
+- Reward flow includes collectible hero card reveal.
+- Character/hero album progress integration.
+
+6) LEVEL VIDEO EXPERIENCE
+- Region video popup with in-app video player.
+- Current configured story video source:
+  assets/STORIES/IMG_9697.MOV
+- Native video controls for playback.
+
+7) QUIZZES AND ADAPTIVE QUESTION DIFFICULTY
+- Multiple question sets in game levels.
+- First-level question set includes November 1 history topic.
+- Question complexity adapts by age:
+  - 3-6: simple understanding questions
+  - 7-10: medium level comprehension
+  - 11+: deeper historical interpretation
+
+8) STORIES MODULE
+- Story cards with date, title, duration, and pages.
+- Two reading modes:
+  - Read mode (manual paging)
+  - Listen mode (narration-style controls)
+- In-story AI-style Q&A modal for child questions.
+- Story text complexity adapted by age profile.
+
+9) TODAY IN HISTORY
+- Date-based automatic historical event selection.
+- Fallback event if no exact date match.
+- Kid-friendly presentation in Arabic UI.
+- Different complexity layers by age profile.
+
+10) DAILY WISDOM
+- Rotating motivational and values-based messages.
+- Family/kid tone encouraging discipline, kindness, and learning.
+
+11) MATH SECTION
+- Game grid model with sample playable interaction.
+- Difficulty framing updated by age band.
+- Premium-lock style cards for selected games.
+
+12) LANGUAGE SECTION (SPELL / ENGLISH TRACK)
+- For younger kids: alphabet and early spelling style content.
+- For older groups: English-focused learning framing.
+
+13) COLORING SECTION
+- Dedicated coloring activity area for creative learning.
+
+14) ALBUM AND COLLECTIBLES
+- Hero/character album with discovered and hidden cards.
+- Progress reflects unlocked map achievements.
+
+15) PERSISTENCE AND STATE
+- Uses local storage for key user progress:
+  - active profile
+  - map progress
+  - collected cards
+- Preserves progress across sessions on the same device.
+
+16) UI/UX STYLE
+- RTL-friendly Arabic interface layout.
+- Child-friendly colors, icons, animations, and large buttons.
+- Responsive card/grid patterns for content navigation.
+
+17) PREMIUM/PAYWALL FLOW (IN-APP MOCK STRUCTURE)
+- Locked premium cards in learning sections.
+- Unlock modal with feature list and pricing-style presentation.
+- Premium state toggle available in app flow.
+
+End of document.

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>مقام · Maqam — تعلّم العب اكتشف</title>
+<meta name="ext-resource-dependency" content="assets/logo-maqam-transparent.png" data-resource-id="logoMaqam" />
+<template id="__bundler_thumbnail" data-bg-color="#FFF6E5">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FFF6E5"/>
+    <g transform="translate(600 400)">
+      <ellipse cx="0" cy="180" rx="200" ry="22" fill="#000" opacity=".12"/>
+      <path d="M-110 180 L-55 -220 L 0 -240 L -18 180 Z" fill="#2C7A51" stroke="#1d5439" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M110 180 L55 -220 L 0 -240 L 18 180 Z" fill="#2C7A51" stroke="#1d5439" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M-28 180 L-18 -200 L 0 -250 L 18 -200 L 28 180 Z" fill="#C0392B" stroke="#8B2616" stroke-width="6" stroke-linejoin="round"/>
+      <g transform="translate(0 60)">
+        <ellipse cx="-28" cy="10" rx="16" ry="10" fill="#FFB3B3" opacity=".7"/>
+        <ellipse cx="28" cy="10" rx="16" ry="10" fill="#FFB3B3" opacity=".7"/>
+        <path d="M-22 -10 Q -14 -2 -6 -10" stroke="#1d5439" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M6 -10 Q 14 -2 22 -10" stroke="#1d5439" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M-18 14 Q 0 30 18 14" stroke="#8B2616" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </g>
+    </g>
+    <text x="600" y="700" text-anchor="middle" font-family="sans-serif" font-size="64" font-weight="800" fill="#C0392B">مقام</text>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Lalezar&family=Tajawal:wght@400;500;700;800;900&family=Reem+Kufi+Fun:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Algerian Warmth — default */
+    --c-clay:#C0392B;
+    --c-amber:#E67E22;
+    --c-sun:#F9C74F;
+    --c-mint:#2C7A51;
+    --c-cream:#FFF6E5;
+    --c-paper:#FFFBF1;
+    --c-ink:#2A1810;
+    --c-soft:#FFE9C4;
+    --c-shadow:rgba(60,30,10,.18);
+    --font-arabic:'Cairo','Tajawal',system-ui,sans-serif;
+    --font-display:'Reem Kufi Fun','Cairo',sans-serif;
+    --font-fun:'Lalezar','Cairo',cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:var(--font-arabic);
+    color:var(--c-ink);
+    background:var(--c-paper);
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* Paper grain texture */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    pointer-events:none;
+    z-index:0;
+    background-image:
+      radial-gradient(rgba(192,57,43,.04) 1px, transparent 1px),
+      radial-gradient(rgba(44,122,81,.03) 1px, transparent 1px);
+    background-size: 22px 22px, 18px 18px;
+    background-position: 0 0, 9px 9px;
+    opacity:.6;
+  }
+  #root{position:relative;z-index:1}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  /* Custom scrollbar */
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:var(--c-soft);border-radius:10px}
+  ::-webkit-scrollbar-thumb:hover{background:var(--c-amber)}
+
+  /* Reusable */
+  .crayon-shadow{filter:drop-shadow(0 6px 0 var(--c-shadow))}
+  .squish{transition:transform .15s ease}
+  .squish:active{transform:scale(.96)}
+
+  /* Loading */
+  #loading{
+    position:fixed;inset:0;display:grid;place-items:center;
+    background:var(--c-paper);z-index:99;
+  }
+  #loading .ball{
+    width:60px;height:60px;border-radius:50%;
+    background:var(--c-clay);
+    animation:bounce 1s ease-in-out infinite alternate;
+  }
+  @keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-30px)}}
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="loading"><div class="ball"></div></div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="tweaks-panel-bundle.jsx"></script>
+<script type="text/babel" src="src/icons.jsx"></script>
+<script type="text/babel" src="src/data.jsx"></script>
+<script type="text/babel" src="src/landing.jsx"></script>
+<script type="text/babel" src="src/app-shell.jsx"></script>
+<script type="text/babel" src="src/section-game.jsx"></script>
+<script type="text/babel" src="src/section-stories.jsx"></script>
+<script type="text/babel" src="src/section-math.jsx"></script>
+<script type="text/babel" src="src/section-spell.jsx"></script>
+<script type="text/babel" src="src/section-coloring.jsx"></script>
+<script type="text/babel" src="src/section-today-history.jsx"></script>
+<script type="text/babel" src="src/section-daily-wisdom.jsx"></script>
+<script type="text/babel" src="src/main.jsx"></script>
+</body>
+</html>
