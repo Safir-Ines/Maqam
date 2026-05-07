@@ -1,0 +1,13 @@
+{
+  "name": "maqam-kids",
+  "version": "1.0.0",
+  "description": "تطبيق مقام التعليمي للأطفال",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Building... Done!'"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
