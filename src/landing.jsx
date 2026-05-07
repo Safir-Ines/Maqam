@@ -24,7 +24,7 @@ function Landing({onEnter}) {
           <Icon.Play size={16} color="#FFF6E5"/>
           ادخل العب
         </button>
-        <img src="assets/logo-maqam-transparent.png" alt="مقام" style={{height:40}}/>
+        <img src="/assets/logo-maqam-transparent.png" alt="مقام" style={{height:40}}/>
       </div>
 
       {/* Hero grid */}

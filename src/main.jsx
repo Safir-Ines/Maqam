@@ -56,11 +56,26 @@ function App() {
   }, [t.palette]);
 
   const profiles = [
-    { id:'yasmine', name:'ياسمين', gender:'girl', ageBand:'3-6', avatar:'assets/pfp/girl.png' },
-    { id:'adam', name:'آدم', gender:'boy', ageBand:'7-10', avatar:'assets/pfp/boy.png' },
-    { id:'rayane', name:'ريان', gender:'boy', ageBand:'11+', avatar:'assets/pfp/boy.png' },
+    { id:'yasmine', name:'ياسمين', gender:'girl', ageBand:'3-6', avatar:'/assets/pfp/girl.png' },
+    { id:'adam', name:'آدم', gender:'boy', ageBand:'7-10', avatar:'/assets/pfp/boy.png' },
+    { id:'rayane', name:'ريان', gender:'boy', ageBand:'11+', avatar:'/assets/pfp/boy.png' },
   ];
   const activeProfile = profiles.find(p => p.id === activeProfileId) || profiles[0];
+  const p = PALETTES[t.palette] || PALETTES.warm;
+
+  // Pre-load essential assets for instant display
+  useE_main(() => {
+    const assetsToLoad = [
+      '/assets/logo-maqam-transparent.png',
+      '/assets/pfp/girl.png',
+      '/assets/pfp/boy.png',
+      '/assets/charchters/algeria-map.png'
+    ];
+    assetsToLoad.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   // Hide loader
   useE_main(() => {

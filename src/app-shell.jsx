@@ -64,7 +64,7 @@ function TopBar({onExit, setSection, collected, profile}) {
           <Icon.Back size={22} color="var(--c-clay)"/>
         </button>
         <button onClick={()=>setSection('home')} style={{display:'flex', alignItems:'center', gap:10}}>
-          <img src="assets/logo-maqam-transparent.png" alt="مقام" style={{height:40}}/>
+          <img src="/assets/logo-maqam-transparent.png" alt="مقام" style={{height:40}}/>
         </button>
       </div>
       
@@ -96,7 +96,7 @@ function TopBar({onExit, setSection, collected, profile}) {
         </button>
         <div style={{width:42, height:42, borderRadius:'50%', background:'var(--c-soft)',
           display:'grid', placeItems:'center', color:'#FFF6E5', border:'2px solid #FFF6E5', overflow:'hidden'}}>
-          <img src={profile?.avatar || 'assets/pfp/girl.png'} alt={profile?.name || 'Profile'} style={{width:'100%', height:'100%', objectFit:'cover'}} />
+          <img src={profile?.avatar || '/assets/pfp/girl.png'} alt={profile?.name || 'Profile'} style={{width:'100%', height:'100%', objectFit:'cover'}} />
         </div>
       </div>
     </div>
