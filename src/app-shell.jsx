@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 // App shell — kid home + section nav
 const { useState: useState_app, useEffect: useEffect_app } = React;
 
@@ -30,6 +31,7 @@ function AppShell({onExit, sectionInitial='home', profile}) {
         {section === 'kitchen' && <SectionKitchen ctx={ctx}/>}
         {section === 'dresses' && <SectionDresses ctx={ctx}/>}
         {section === 'passport' && <SectionPassport ctx={ctx}/>}
+        {section === 'parent' && <SectionParentDashboard ctx={ctx}/>}
         {section === 'nationalHistory' && <SectionNationalHistory ctx={ctx}/>}
         {section === 'todayHistory' && <SectionTodayHistory ctx={ctx}/>}
         {section === 'dailyWisdom' && <SectionDailyWisdom ctx={ctx}/>}
@@ -63,6 +65,16 @@ function TopBar({onExit, setSection, collected, profile}) {
         </button>
         <button onClick={()=>setSection('home')} style={{display:'flex', alignItems:'center', gap:10}}>
           <img src="assets/logo-maqam-transparent.png" alt="مقام" style={{height:40}}/>
+        </button>
+      </div>
+      
+      <div style={{display:'flex', gap:10, alignItems:'center'}}>
+        <button onClick={()=>setSection('parent')} className="squish" style={{
+          background:'#F1F5F9', color:'#475569', padding:'8px 14px', borderRadius:14,
+          display:'flex', gap:6, alignItems:'center', border:'1px solid #E2E8F0',
+          fontSize:12, fontWeight:700
+        }}>
+          <Icon.Settings size={16}/> لوحة الأولياء
         </button>
       </div>
 

@@ -1,3 +1,4 @@
+import React from 'react';
 // Landing — desert hero screen
 function Landing({onEnter}) {
   return (

@@ -149,14 +149,4 @@ function DishChef({dish, onBack, ageBand='7-10'}) {
   );
 }
 
-      <style>{`
-        @keyframes popIn {
-          0% { transform: scale(0.8); opacity:0; }
-          100% { transform: scale(1); opacity:1; }
-        }
-      `}</style>
-    </div>
-  );
-}
-
 window.SectionKitchen = SectionKitchen;

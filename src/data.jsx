@@ -1,3 +1,4 @@
+import React from 'react';
 // All content data — Algerian regions, cards, stories, etc.
 
 const REGIONS = [

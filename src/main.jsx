@@ -1,3 +1,26 @@
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
+
+// Side-effect imports to register globals on window
+import '../tweaks-panel.jsx';
+import './icons.jsx';
+import './data.jsx';
+import './landing.jsx';
+import './app-shell.jsx';
+import './section-game.jsx';
+import './section-stories.jsx';
+import './section-math.jsx';
+import './section-spell.jsx';
+import './section-coloring.jsx';
+import './section-today-history.jsx';
+import './section-parent-dashboard.jsx';
+import './section-kitchen.jsx';
+import './section-dresses.jsx';
+import './section-passport.jsx';
+import './section-puzzles.jsx';
+import './section-national-history.jsx';
+import './section-daily-wisdom.jsx';
+
 // Main entry — wires landing → app shell + tweaks panel
 const { useState: useS_main, useEffect: useE_main } = React;
 

@@ -1,3 +1,4 @@
+import React from 'react';
 // Cartoon icons — hand-drawn-ish, thick strokes
 const Icon = {
   Game: ({size=64, color='currentColor'}) => (
