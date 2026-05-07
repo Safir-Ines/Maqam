@@ -1,3 +1,4 @@
+import React from 'react';
 // Coloring game — pick image → paint bucket canvas
 const { useState: useS_col, useEffect: useE_col, useRef: useR_col } = React;
 

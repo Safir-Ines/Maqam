@@ -1,3 +1,4 @@
+import React from 'react';
 // Passport Section — tracks child's progress across Algerian cities
 function SectionPassport({ctx}) {
   const visitedCount = ctx.collected.length;

@@ -1,3 +1,4 @@
+import React from 'react';
 // Daily wisdom section — motivational quote for kids
 function SectionDailyWisdom({ctx}) {
   const now = new Date();

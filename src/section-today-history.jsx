@@ -1,3 +1,4 @@
+import React from 'react';
 // What happened today section — kid-friendly Algerian history by date
 function SectionTodayHistory({ctx}) {
   const now = new Date();

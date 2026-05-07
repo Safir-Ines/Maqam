@@ -1,3 +1,4 @@
+import React from 'react';
 // Game section — map → level path → game → reveal
 const { useState: useS_g, useEffect: useE_g } = React;
 

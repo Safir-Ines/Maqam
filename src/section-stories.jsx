@@ -1,3 +1,4 @@
+import React from 'react';
 // Stories section — choose read/listen, AI reader modal
 const { useState: useS_s } = React;
 function StoryCover({story, size=72}) {

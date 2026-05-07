@@ -1,3 +1,4 @@
+import React from 'react';
 // Parent/School Dashboard — Management & Monitoring
 const { useState: useS_p, useEffect: useE_p } = React;
 

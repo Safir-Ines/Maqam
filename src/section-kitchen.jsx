@@ -1,3 +1,4 @@
+import React from 'react';
 // Traditional Kitchen Section — Explore Algerian food
 function SectionKitchen({ctx}) {
   const [activeDish, setActiveDish] = React.useState(null);

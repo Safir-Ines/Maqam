@@ -1,3 +1,4 @@
+import React from 'react';
 // Traditional Dresses Section — Explore Algerian cultural attire
 function SectionDresses({ctx}) {
   const dresses = [

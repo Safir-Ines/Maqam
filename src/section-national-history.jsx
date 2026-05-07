@@ -1,3 +1,4 @@
+import React from 'react';
 // Section National History — interactive timeline and heroes hub
 function SectionNationalHistory({ctx}) {
   const [activeTab, setActiveTab] = React.useState('timeline');

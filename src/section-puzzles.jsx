@@ -1,3 +1,4 @@
+import React from 'react';
 // Puzzle Game — interactive jigsaw-style game
 function SectionPuzzles({ctx}) {
   const [activePuzzle, setActivePuzzle] = React.useState(null);

@@ -1,3 +1,4 @@
+import React from 'react';
 // Math + Spell sections share a similar grid + lock pattern
 const { useState: useS_m } = React;
 
