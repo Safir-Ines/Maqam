@@ -30,6 +30,32 @@ const PALETTES = {
   desert: {name:'رمال الصحراء',    clay:'#B5651D', amber:'#D4A574', sun:'#F4D8A8', mint:'#7C8C5B', cream:'#FBF3E2', paper:'#FFF8EA', soft:'#F0E2BF'},
 };
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null, info: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, info) {
+    this.setState({ info });
+    console.error("ErrorBoundary caught an error", error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{padding: 40, background: 'red', color: 'white', minHeight: '100vh', direction: 'ltr', textAlign: 'left'}}>
+          <h1>Something went wrong.</h1>
+          <pre>{this.state.error?.toString()}</pre>
+          <pre>{this.state.info?.componentStack}</pre>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 function App() {
   const [view, setView] = useS_main('landing'); // landing | app
   const [pickerOpen, setPickerOpen] = useS_main(false);
@@ -84,7 +110,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <ErrorBoundary>
       {view === 'landing' && (
         <Landing onEnter={()=>setPickerOpen(true)} variant={t.landingVariant}/>
       )}
@@ -128,7 +154,7 @@ function App() {
           <TweakButton label="صفحة الطفل" onClick={()=>setView('app')}/>
         </TweakSection>
       </TweaksPanel>
-    </>
+    </ErrorBoundary>
   );
 }
 
