@@ -96,6 +96,14 @@ const Icon = {
       <circle cx="12" cy="12" r="3"></circle>
     </svg>
   ),
+  Users: ({size=24, color='currentColor'}) => (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </svg>
+  ),
   Brush: ({size=64, color='currentColor'}) => (
     <svg viewBox="0 0 64 64" width={size} height={size} fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path d="M42 6 L58 22 L24 54 Q14 60 8 56 Q10 46 18 36 Z" fill="#F9C74F" stroke={color} strokeWidth="3.5"/>
